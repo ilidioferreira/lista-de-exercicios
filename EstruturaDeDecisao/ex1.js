@@ -1,5 +1,7 @@
 function LargeNumber (num1,num2) {
-  if num1 > num2
-  print(num1)
-  else print (num2)
+  if (num1 > num2) {
+  console.log(num1);
+  }
+  else if (num2 > num1) { 
+    console.logprint (num2);
 }
