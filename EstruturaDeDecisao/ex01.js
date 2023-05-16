@@ -1,3 +1,5 @@
+// Faça um Programa que peça dois números e imprima o maior deles.
+
 function LargeNumber (num1,num2) {
   if (num1 > num2) {
   console.log(num1);
