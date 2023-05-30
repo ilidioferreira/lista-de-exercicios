@@ -51,7 +51,7 @@ while (question_5 != "sim" && question_5 != "não") {
     }
 }
 
-function getStatus () {
+function getStatus (trueQuestions) {
     if (trueQuestions === 2) {return "Suspeita"}
     else if (trueQuestions === 3 || trueQuestions === 4 ) {return "Cúmplice"}
     else if (trueQuestions === 5) {return "Assassino"}
