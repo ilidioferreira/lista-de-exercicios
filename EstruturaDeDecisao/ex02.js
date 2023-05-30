@@ -4,6 +4,5 @@ function isPositive(number) {
     if (number >= 0) return true;
     return false;
 }
-
-const isPositive = isPositive(-1);
-console.log(isPositive);
+const result = isPositive(5);
+console.log(result? "positive": "negative")
