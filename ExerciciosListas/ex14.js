@@ -9,51 +9,28 @@
 // Caso contrário, ele será classificado como "Inocente".
 
 
-let trueQuestions = 0 
-const question_1 = prompt("Telefonou para a vítima? Digite 'sim' ou 'não'");
-const question_2 = prompt("Esteve no local do crime? Digite 'sim' ou 'não'");
-const question_3 = prompt("Mora perto da vítima? Digite 'sim' ou 'não'");
-const question_4 = prompt("Devia para a vítima? Digite 'sim' ou 'não'");
-const question_5 = prompt("Já trabalhou com a vítima? Digite 'sim' ou 'não'");
+let trueQuestions = 0
+const questions = ("Telefonou para a vítima?", "Esteve no local do crime?", "Mora perto da vítima?", "Devia para a vítima?", "Já trabalhou com a vítima?")
 
-while (question_1 != "sim" && question_1 != "não") {
-    question_1;
-    if (question_1 === "sim") {
-        trueQuestions =+ 1 
+function getAnswers() {
+    for (let i = 0; i < 20; i++)
+        let answers = prompt(questions[i])
+    while (answers != "sim" && answers != "não") {
+        answers;
+        if (question_1 === "sim") {
+            trueQuestions = +1
+        } else trueQuestions = +0
     }
 }
 
-while (question_2 != "sim" && question_2 != "não") {
-    question_2;
-    if (question_2 === "sim") {
-        trueQuestions =+ 1 
+function getStatus(trueQuestions) {
+    if (trueQuestions === 2) {
+        return "Suspeito"
+    } else if (trueQuestions === 3 || trueQuestions === 4) {
+        return "Cúmplice"
+    } else if (trueQuestions === 5) {
+        return "Assassino"
+    } else {
+        return "Inocente"
     }
-}
-
-while (question_3 != "sim" && question_3 != "não") {
-    question_3;
-    if (question_3 === "sim") {
-        trueQuestions =+ 1 
-    }
-}
-
-while (question_4 != "sim" && question_4 != "não") {
-    question_4;
-    if (question_4 === "sim") {
-        trueQuestions =+ 1 
-    }
-}
-
-while (question_5 != "sim" && question_5 != "não") {
-    question_5;
-    if (question_5 === "sim") {
-        trueQuestions =+ 1 
-    }
-}
-
-function getStatus (trueQuestions) {
-    if (trueQuestions === 2) {return "Suspeita"}
-    else if (trueQuestions === 3 || trueQuestions === 4 ) {return "Cúmplice"}
-    else if (trueQuestions === 5) {return "Assassino"}
-    else {return "Inocente"}
 }
