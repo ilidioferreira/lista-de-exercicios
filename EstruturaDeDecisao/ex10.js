@@ -1,14 +1,16 @@
 // Faça um Programa que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino ou N- Noturno.
 // Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
 
-function getSaudacao (turno) {
+function SaudacaoTurno(turno) {
   if (turno == 'M') {
-    console.log("Bom dia!");
+      console.log("Bom dia!");
   } else if (turno == 'V') {
-    console.log("Boa tarde!");
+      console.log("Boa tarde!");
   } else if (turno == 'N') {
-    console.log("Boa noite!");
+      console.log("Boa noite!");
   } else console.log("Valor Inválido!");
 }
-    
+
+const turno = prompt('Digite o turno')
+SaudacaoTurno(turno)
   
