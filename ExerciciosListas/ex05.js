@@ -63,4 +63,3 @@ function getOddsAndEvens(numbers) {
 const numbers = readNumbers(20)
 const [ even, odd ] = getOddsAndEvens(numbers)
 console.log({ numbers, even, odd })
-}
